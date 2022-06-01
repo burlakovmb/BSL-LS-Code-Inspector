@@ -1,0 +1,1968 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<Button name="FormCheck" id="281">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Check</CommandName>
+				<ExtendedTooltip name="FormCheckExtendedTooltip" id="276"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="BSL_LanguageServerForder" id="272">
+			<DataPath>Object.BSL_LanguageServerForder</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="BSL_LanguageServerForderContextMenu" id="273"/>
+			<ExtendedTooltip name="BSL_LanguageServerForderExtendedTooltip" id="274"/>
+			<Events>
+				<Event name="StartChoice">BSL_LanguageServerForderStartChoice</Event>
+			</Events>
+		</InputField>
+		<InputField name="CheckMode" id="287">
+			<DataPath>Object.CheckMode</DataPath>
+			<DropListButton>true</DropListButton>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Arbitrary code</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Произвольный код</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Code</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Configuration in files</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Папка</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Folder</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="CheckModeContextMenu" id="286"/>
+			<ExtendedTooltip name="CheckModeExtendedTooltip" id="288"/>
+			<Events>
+				<Event name="OnChange">CheckModeOnChange</Event>
+			</Events>
+		</InputField>
+		<InputField name="UnloadedConfigurationFolder" id="280">
+			<DataPath>Object.UnloadedConfigurationFolder</DataPath>
+			<Visible>false</Visible>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="UnloadedConfigurationFolderContextMenu" id="284"/>
+			<ExtendedTooltip name="UnloadedConfigurationFolderExtendedTooltip" id="282"/>
+			<Events>
+				<Event name="StartChoice">UnloadedConfigurationFolderStartChoice</Event>
+			</Events>
+		</InputField>
+		<InputField name="CheckOptions" id="256">
+			<DataPath>Object.CheckOptions</DataPath>
+			<DropListButton>true</DropListButton>
+			<ChoiceButton>false</ChoiceButton>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По умолчанию</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">By default</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выборочно</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Custom</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="CheckOptionsContextMenu" id="243"/>
+			<ExtendedTooltip name="CheckOptionsExtendedTooltip" id="244"/>
+			<Events>
+				<Event name="OnChange">CheckOptionsOnChange</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="CheckDiagnostics" id="245">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check diagnostics</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check diagnostics</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="CheckDiagnosticsExtendedTooltip" id="246"/>
+			<ChildItems>
+				<CommandBar name="CommandPanel" id="64">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Command panel</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Command panel</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="CommandPanelExtendedTooltip" id="65"/>
+					<ChildItems>
+						<Button name="LoadCheckDiaglosticsFromFile" id="70">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.LoadCheckDiaglosticsFromFile</CommandName>
+							<ExtendedTooltip name="LoadCheckDiaglosticsFromFileExtendedTooltip" id="71"/>
+						</Button>
+						<Button name="SaveCheckDiaglosticsToFile" id="66">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.SaveCheckDiaglosticsToFile</CommandName>
+							<ExtendedTooltip name="SaveCheckDiaglosticsToFileExtendedTooltip" id="67"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<UsualGroup name="Parts" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Parts</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Parts</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="PartsExtendedTooltip" id="69"/>
+					<ChildItems>
+						<UsualGroup name="Bugs" id="247">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Bugs</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Bugs</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Collapsible</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="BugsExtendedTooltip" id="248"/>
+							<ChildItems>
+								<UsualGroup name="BugsCritical" id="118">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Critical</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Критичные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Bugs critical</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Collapsible</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="BugsCriticalExtendedTooltip" id="119"/>
+									<ChildItems>
+										<CheckBoxField name="CreateQueryInCycle" id="120">
+											<DataPath>CreateQueryInCycle</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CreateQueryInCycleContextMenu" id="121"/>
+											<ExtendedTooltip name="CreateQueryInCycleExtendedTooltip" id="122"/>
+										</CheckBoxField>
+										<CheckBoxField name="DataExchangeLoading" id="126">
+											<DataPath>DataExchangeLoading</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>There is no check for the DataExchange.Loading feature in the object's event handler</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="DataExchangeLoadingContextMenu" id="127"/>
+											<ExtendedTooltip name="DataExchangeLoadingExtendedTooltip" id="128"/>
+										</CheckBoxField>
+										<CheckBoxField name="UsingObjectNotAvailableUnix" id="225">
+											<DataPath>UsingObjectNotAvailableUnix</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="UsingObjectNotAvailableUnixContextMenu" id="226"/>
+											<ExtendedTooltip name="UsingObjectNotAvailableUnixExtendedTooltip" id="227"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Blocking" id="253">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Blocking</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Блокирующие</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Blocking</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Collapsible</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="BlockingExtendedTooltip" id="254"/>
+									<ChildItems>
+										<CheckBoxField name="CodeBlockBeforeSub" id="80">
+											<DataPath>CodeBlockBeforeSub</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Method definitions must be placed before the module body statements</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CodeBlockBeforeSubContextMenu" id="81"/>
+											<ExtendedTooltip name="CodeBlockBeforeSubExtendedTooltip" id="82"/>
+										</CheckBoxField>
+										<CheckBoxField name="CommonModuleAssign" id="100">
+											<DataPath>CommonModuleAssign</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CommonModuleAssignContextMenu" id="101"/>
+											<ExtendedTooltip name="CommonModuleAssignExtendedTooltip" id="102"/>
+										</CheckBoxField>
+										<CheckBoxField name="UnaryPlusInConcatenation" id="198">
+											<DataPath>UnaryPlusInConcatenation</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="UnaryPlusInConcatenationContextMenu" id="199"/>
+											<ExtendedTooltip name="UnaryPlusInConcatenationExtendedTooltip" id="200"/>
+										</CheckBoxField>
+										<CheckBoxField name="UnsafeSafeModeMethodCall" id="204">
+											<DataPath>UnsafeSafeModeMethodCall</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="UnsafeSafeModeMethodCallContextMenu" id="205"/>
+											<ExtendedTooltip name="UnsafeSafeModeMethodCallExtendedTooltip" id="206"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="BugsImportant" id="263">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Important</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Важные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Bugs important</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Collapsible</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="BugsImportantExtendedTooltip" id="264"/>
+									<ChildItems>
+										<CheckBoxField name="BeginTransactionBeforeTryCatch" id="265">
+											<DataPath>BeginTransactionBeforeTryCatch</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Violation of rules for working with transactions for the 'BeginTransaction' method</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="BeginTransactionBeforeTryCatchContextMenu" id="270"/>
+											<ExtendedTooltip name="BeginTransactionBeforeTryCatchExtendedTooltip" id="266"/>
+										</CheckBoxField>
+										<CheckBoxField name="CommitTransactionOutsideTryCatch" id="97">
+											<DataPath>CommitTransactionOutsideTryCatch</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CommitTransactionOutsideTryCatchContextMenu" id="98"/>
+											<ExtendedTooltip name="CommitTransactionOutsideTryCatchExtendedTooltip" id="99"/>
+										</CheckBoxField>
+										<CheckBoxField name="CommonModuleInvalidType" id="103">
+											<DataPath>CommonModuleInvalidType</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CommonModuleInvalidTypeContextMenu" id="104"/>
+											<ExtendedTooltip name="CommonModuleInvalidTypeExtendedTooltip" id="105"/>
+										</CheckBoxField>
+										<CheckBoxField name="DeprecatedCurrentDate" id="132">
+											<DataPath>DeprecatedCurrentDate</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Using the deprecated "CurrentDate()" method</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="DeprecatedCurrentDateContextMenu" id="133"/>
+											<ExtendedTooltip name="DeprecatedCurrentDateExtendedTooltip" id="134"/>
+										</CheckBoxField>
+										<CheckBoxField name="GetFormMethod" id="162">
+											<DataPath>GetFormMethod</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Using the GetForm method</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="GetFormMethodContextMenu" id="163"/>
+											<ExtendedTooltip name="GetFormMethodExtendedTooltip" id="164"/>
+										</CheckBoxField>
+										<CheckBoxField name="MultilingualStringHasAllDeclaredLanguages" id="174">
+											<DataPath>MultilingualStringHasAllDeclaredLanguages</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="MultilingualStringHasAllDeclaredLanguagesContextMenu" id="175"/>
+											<ExtendedTooltip name="MultilingualStringHasAllDeclaredLanguagesExtendedTooltip" id="176"/>
+										</CheckBoxField>
+										<CheckBoxField name="MultilingualStringUsingWithTemplate" id="177">
+											<DataPath>MultilingualStringUsingWithTemplate</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Partially localized text is used in the StrTemplate function</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="MultilingualStringUsingWithTemplateContextMenu" id="178"/>
+											<ExtendedTooltip name="MultilingualStringUsingWithTemplateExtendedTooltip" id="179"/>
+										</CheckBoxField>
+										<CheckBoxField name="UsingLikeInQuery" id="222">
+											<DataPath>UsingLikeInQuery</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="UsingLikeInQueryContextMenu" id="223"/>
+											<ExtendedTooltip name="UsingLikeInQueryExtendedTooltip" id="224"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="CodeDefects" id="249">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Code defects</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дефекты кода</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Code defects</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Collapsible</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="CodeDefectsExtendedTooltip" id="250"/>
+							<ChildItems>
+								<UsualGroup name="CodeDefectsCritical" id="86">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Critical</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Критичные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Code defects critical</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="CodeDefectsCriticalExtendedTooltip" id="87"/>
+									<ChildItems>
+										<CheckBoxField name="CognitiveComplexity" id="88">
+											<DataPath>CognitiveComplexity</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Cognitive complexity</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CognitiveComplexityContextMenu" id="89"/>
+											<ExtendedTooltip name="CognitiveComplexityExtendedTooltip" id="90"/>
+										</CheckBoxField>
+										<CheckBoxField name="CyclomaticComplexity" id="123">
+											<DataPath>CyclomaticComplexity</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CyclomaticComplexityContextMenu" id="124"/>
+											<ExtendedTooltip name="CyclomaticComplexityExtendedTooltip" id="125"/>
+										</CheckBoxField>
+										<CheckBoxField name="NestedStatements" id="180">
+											<DataPath>NestedStatements</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Control structures should not be nested too deep.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="NestedStatementsContextMenu" id="181"/>
+											<ExtendedTooltip name="NestedStatementsExtendedTooltip" id="182"/>
+										</CheckBoxField>
+										<CheckBoxField name="UsingGoto" id="213">
+											<DataPath>UsingGoto</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="UsingGotoContextMenu" id="214"/>
+											<ExtendedTooltip name="UsingGotoExtendedTooltip" id="215"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="CodeDefectsImportant" id="268">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Important</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Важные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Code defects important</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Collapsible</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="CodeDefectsImportantExtendedTooltip" id="255"/>
+									<ChildItems>
+										<CheckBoxField name="AllFunctionPathMustHaveReturn" id="257">
+											<DataPath>AllFunctionPathMustHaveReturn</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>All possible paths for executing a function must contain a Return statement</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="AllFunctionPathMustHaveReturnContextMenu" id="258"/>
+											<ExtendedTooltip name="AllFunctionPathMustHaveReturnExtendedTooltip" id="259"/>
+										</CheckBoxField>
+										<CheckBoxField name="AssignAliasFieldsInQuery" id="260">
+											<DataPath>AssignAliasFieldsInQuery</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Assigning aliases to selected fields in a query</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="AssignAliasFieldsInQueryContextMenu" id="261"/>
+											<ExtendedTooltip name="AssignAliasFieldsInQueryExtendedTooltip" id="262"/>
+										</CheckBoxField>
+										<CheckBoxField name="CachedPublic" id="267">
+											<DataPath>CachedPublic</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>API caching</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CachedPublicContextMenu" id="62"/>
+											<ExtendedTooltip name="CachedPublicExtendedTooltip" id="63"/>
+										</CheckBoxField>
+										<CheckBoxField name="CodeAfterAsyncCall" id="77">
+											<DataPath>CodeAfterAsyncCall</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>After calling the asynchronous method, there are lines of code</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CodeAfterAsyncCallContextMenu" id="78"/>
+											<ExtendedTooltip name="CodeAfterAsyncCallExtendedTooltip" id="79"/>
+										</CheckBoxField>
+										<CheckBoxField name="CommonModuleMissingAPI" id="106">
+											<DataPath>CommonModuleMissingAPI</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Common module must have a programming interface</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CommonModuleMissingAPIContextMenu" id="107"/>
+											<ExtendedTooltip name="CommonModuleMissingAPIExtendedTooltip" id="108"/>
+										</CheckBoxField>
+										<CheckBoxField name="CommonModuleNameCached" id="109">
+											<DataPath>CommonModuleNameCached</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Missed postfix "ReUse"</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CommonModuleNameCachedContextMenu" id="110"/>
+											<ExtendedTooltip name="CommonModuleNameCachedExtendedTooltip" id="111"/>
+										</CheckBoxField>
+										<CheckBoxField name="CompilationDirectiveLost" id="112">
+											<DataPath>CompilationDirectiveLost</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CompilationDirectiveLostContextMenu" id="113"/>
+											<ExtendedTooltip name="CompilationDirectiveLostExtendedTooltip" id="114"/>
+										</CheckBoxField>
+										<CheckBoxField name="CompilationDirectiveNeedLess" id="115">
+											<DataPath>CompilationDirectiveNeedLess</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CompilationDirectiveNeedLessContextMenu" id="116"/>
+											<ExtendedTooltip name="CompilationDirectiveNeedLessExtendedTooltip" id="117"/>
+										</CheckBoxField>
+										<CheckBoxField name="EmptyCodeBlock" id="150">
+											<DataPath>EmptyCodeBlock</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="EmptyCodeBlockContextMenu" id="151"/>
+											<ExtendedTooltip name="EmptyCodeBlockExtendedTooltip" id="152"/>
+										</CheckBoxField>
+										<CheckBoxField name="IfElseIfEndsWithElse" id="165">
+											<DataPath>IfElseIfEndsWithElse</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="IfElseIfEndsWithElseContextMenu" id="166"/>
+											<ExtendedTooltip name="IfElseIfEndsWithElseExtendedTooltip" id="167"/>
+										</CheckBoxField>
+										<CheckBoxField name="IsInRoleMethod" id="168">
+											<DataPath>IsInRoleMethod</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="IsInRoleMethodContextMenu" id="169"/>
+											<ExtendedTooltip name="IsInRoleMethodExtendedTooltip" id="170"/>
+										</CheckBoxField>
+										<CheckBoxField name="TempFilesDir" id="192">
+											<DataPath>TempFilesDir</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Calling the function TempFilesDir()</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="TempFilesDirContextMenu" id="193"/>
+											<ExtendedTooltip name="TempFilesDirExtendedTooltip" id="194"/>
+										</CheckBoxField>
+										<CheckBoxField name="UsingFindElementByString" id="210">
+											<DataPath>UsingFindElementByString</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Using the "FindByName" and "FindByCode" methods</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="UsingFindElementByStringContextMenu" id="211"/>
+											<ExtendedTooltip name="UsingFindElementByStringExtendedTooltip" id="212"/>
+										</CheckBoxField>
+										<CheckBoxField name="UsingSynchronousCalls" id="228">
+											<DataPath>UsingSynchronousCalls</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="UsingSynchronousCallsContextMenu" id="229"/>
+											<ExtendedTooltip name="UsingSynchronousCallsExtendedTooltip" id="230"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="CodeDefectsInformation" id="72">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Information</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информативные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Code defects information</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Collapsible</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="CodeDefectsInformationExtendedTooltip" id="73"/>
+									<ChildItems>
+										<CheckBoxField name="CanonicalSpellingKeywords" id="74">
+											<DataPath>CanonicalSpellingKeywords</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CanonicalSpellingKeywordsContextMenu" id="75"/>
+											<ExtendedTooltip name="CanonicalSpellingKeywordsExtendedTooltip" id="76"/>
+										</CheckBoxField>
+										<CheckBoxField name="CodeOutOfRegion" id="83">
+											<DataPath>CodeOutOfRegion</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>The code is located outside the area</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CodeOutOfRegionContextMenu" id="84"/>
+											<ExtendedTooltip name="CodeOutOfRegionExtendedTooltip" id="85"/>
+										</CheckBoxField>
+										<CheckBoxField name="CommandModuleExportMethods" id="91">
+											<DataPath>CommandModuleExportMethods</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Export Methods in Command and General Command Modules</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CommandModuleExportMethodsContextMenu" id="92"/>
+											<ExtendedTooltip name="CommandModuleExportMethodsExtendedTooltip" id="93"/>
+										</CheckBoxField>
+										<CheckBoxField name="CommentedCode" id="94">
+											<DataPath>CommentedCode</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="CommentedCodeContextMenu" id="95"/>
+											<ExtendedTooltip name="CommentedCodeExtendedTooltip" id="96"/>
+										</CheckBoxField>
+										<CheckBoxField name="DeprecatedMethods8310" id="141">
+											<DataPath>DeprecatedMethods8310</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="DeprecatedMethods8310ContextMenu" id="142"/>
+											<ExtendedTooltip name="DeprecatedMethods8310ExtendedTooltip" id="143"/>
+										</CheckBoxField>
+										<CheckBoxField name="DeprecatedAttributes8312" id="129">
+											<DataPath>DeprecatedAttributes8312</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="DeprecatedAttributes8312ContextMenu" id="130"/>
+											<ExtendedTooltip name="DeprecatedAttributes8312ExtendedTooltip" id="131"/>
+										</CheckBoxField>
+										<CheckBoxField name="DeprecatedMethods8317" id="144">
+											<DataPath>DeprecatedMethods8317</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="DeprecatedMethods8317ContextMenu" id="145"/>
+											<ExtendedTooltip name="DeprecatedMethods8317ExtendedTooltip" id="146"/>
+										</CheckBoxField>
+										<CheckBoxField name="DeprecatedFind" id="135">
+											<DataPath>DeprecatedFind</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Using the deprecated "Find" method</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="DeprecatedFindContextMenu" id="136"/>
+											<ExtendedTooltip name="DeprecatedFindExtendedTooltip" id="137"/>
+										</CheckBoxField>
+										<CheckBoxField name="DeprecatedMessage" id="138">
+											<DataPath>DeprecatedMessage</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Using the deprecated "Message" method</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="DeprecatedMessageContextMenu" id="139"/>
+											<ExtendedTooltip name="DeprecatedMessageExtendedTooltip" id="140"/>
+										</CheckBoxField>
+										<CheckBoxField name="DeprecatedTypeManagedForm" id="147">
+											<DataPath>DeprecatedTypeManagedForm</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="DeprecatedTypeManagedFormContextMenu" id="148"/>
+											<ExtendedTooltip name="DeprecatedTypeManagedFormExtendedTooltip" id="149"/>
+										</CheckBoxField>
+										<CheckBoxField name="FormDataToValue" id="159">
+											<DataPath>FormDataToValue</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Using the FormDataToValue method</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="FormDataToValueContextMenu" id="160"/>
+											<ExtendedTooltip name="FormDataToValueExtendedTooltip" id="161"/>
+										</CheckBoxField>
+										<CheckBoxField name="MissingSpace" id="171">
+											<DataPath>MissingSpace</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Missing spaces to the left or right of the operators + - * / = % &lt; &gt; &lt;&gt; &lt;= &gt;=, from keywords, as well as to the right of , and ;</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="MissingSpaceContextMenu" id="172"/>
+											<ExtendedTooltip name="MissingSpaceExtendedTooltip" id="173"/>
+										</CheckBoxField>
+										<CheckBoxField name="SpaceAtStartComment" id="189">
+											<DataPath>SpaceAtStartComment</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="SpaceAtStartCommentContextMenu" id="190"/>
+											<ExtendedTooltip name="SpaceAtStartCommentExtendedTooltip" id="191"/>
+										</CheckBoxField>
+										<CheckBoxField name="Typo" id="195">
+											<DataPath>Typo</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="TypoContextMenu" id="196"/>
+											<ExtendedTooltip name="TypoExtendedTooltip" id="197"/>
+										</CheckBoxField>
+										<CheckBoxField name="UnionAll" id="201">
+											<DataPath>UnionAll</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="UnionAllContextMenu" id="202"/>
+											<ExtendedTooltip name="UnionAllExtendedTooltip" id="203"/>
+										</CheckBoxField>
+										<CheckBoxField name="UsingThisForm" id="231">
+											<DataPath>UsingThisForm</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="UsingThisFormContextMenu" id="232"/>
+											<ExtendedTooltip name="UsingThisFormExtendedTooltip" id="233"/>
+										</CheckBoxField>
+										<CheckBoxField name="YoLetterUsage" id="234">
+											<DataPath>YoLetterUsage</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="YoLetterUsageContextMenu" id="235"/>
+											<ExtendedTooltip name="YoLetterUsageExtendedTooltip" id="236"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Vulnerabilities" id="251">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Vulnerabilities</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Потенциальные уязвимости</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Vulnerabilities</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="VulnerabilitiesExtendedTooltip" id="252"/>
+							<ChildItems>
+								<CheckBoxField name="ExecuteExternalCode" id="153">
+									<DataPath>ExecuteExternalCode</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ExecuteExternalCodeContextMenu" id="154"/>
+									<ExtendedTooltip name="ExecuteExternalCodeExtendedTooltip" id="155"/>
+								</CheckBoxField>
+								<CheckBoxField name="ExecuteExternalCodeInCommonModule" id="156">
+									<DataPath>ExecuteExternalCodeInCommonModule</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ExecuteExternalCodeInCommonModuleContextMenu" id="157"/>
+									<ExtendedTooltip name="ExecuteExternalCodeInCommonModuleExtendedTooltip" id="158"/>
+								</CheckBoxField>
+								<CheckBoxField name="OSUsersMethod" id="183">
+									<DataPath>OSUsersMethod</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="OSUsersMethodContextMenu" id="184"/>
+									<ExtendedTooltip name="OSUsersMethodExtendedTooltip" id="185"/>
+								</CheckBoxField>
+								<CheckBoxField name="SetPermissionsForNewObjects" id="186">
+									<DataPath>SetPermissionsForNewObjects</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>The checkbox "Set rights for new objects" must be checked only for the role FullPermissions</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="SetPermissionsForNewObjectsContextMenu" id="187"/>
+									<ExtendedTooltip name="SetPermissionsForNewObjectsExtendedTooltip" id="188"/>
+								</CheckBoxField>
+								<CheckBoxField name="UsingExternalCodeTools" id="207">
+									<DataPath>UsingExternalCodeTools</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Using External Code Execution Features</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UsingExternalCodeToolsContextMenu" id="208"/>
+									<ExtendedTooltip name="UsingExternalCodeToolsExtendedTooltip" id="209"/>
+								</CheckBoxField>
+								<CheckBoxField name="UsingHardcodeNetworkAddress" id="216">
+									<DataPath>UsingHardcodeNetworkAddress</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UsingHardcodeNetworkAddressContextMenu" id="217"/>
+									<ExtendedTooltip name="UsingHardcodeNetworkAddressExtendedTooltip" id="218"/>
+								</CheckBoxField>
+								<CheckBoxField name="UsingHardcodeSecretInformation" id="219">
+									<DataPath>UsingHardcodeSecretInformation</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UsingHardcodeSecretInformationContextMenu" id="220"/>
+									<ExtendedTooltip name="UsingHardcodeSecretInformationExtendedTooltip" id="221"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Code" id="237">
+			<DataPath>Object.Code</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>50</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>500</MaxWidth>
+			<Height>10</Height>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<MultiLine>true</MultiLine>
+			<ExtendedEdit>true</ExtendedEdit>
+			<ContextMenu name="CodeContextMenu" id="239"/>
+			<ExtendedTooltip name="CodeExtendedTooltip" id="241"/>
+			<Events>
+				<Event name="OnChange">CodeOnChange</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="Results" id="285">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Results</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Results</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ResultsExtendedTooltip" id="283"/>
+			<ChildItems>
+				<SpreadSheetDocumentField name="CheckResult" id="277">
+					<DataPath>CheckResult</DataPath>
+					<ContextMenu name="CheckResultContextMenu" id="278"/>
+					<ExtendedTooltip name="CheckResultExtendedTooltip" id="279"/>
+				</SpreadSheetDocumentField>
+				<SpreadSheetDocumentField name="SummaryResult" id="271">
+					<DataPath>SummaryResult</DataPath>
+					<Width>4</Width>
+					<ContextMenu name="SummaryResultContextMenu" id="275"/>
+					<ExtendedTooltip name="SummaryResultExtendedTooltip" id="269"/>
+				</SpreadSheetDocumentField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="238">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.BSL_LS_Code_Inspector</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="CheckResult" id="240">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Result of check</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты проверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SummaryResult" id="242">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Summary of check</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги выполнения проверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="TmpAdress" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Tmp adress</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="AllFunctionPathMustHaveReturn" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>All function path must have return</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все возможные пути выполнения функции должны содержать оператор Возврат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="AssignAliasFieldsInQuery" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Assign alias fields in query</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение псевдонимов выбранным полям в запросе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="BeginTransactionBeforeTryCatch" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Begin transaction before try catch</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нарушение правил работы с транзакциями для метода 'НачатьТранзакцию'</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CachedPublic" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cached public</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кеширование программного интерфейса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CanonicalSpellingKeywords" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Canonical spelling keywords</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каноническое написание ключевых слов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CodeAfterAsyncCall" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Code after async call</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>После вызова асинхронного метода есть строки кода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CodeBlockBeforeSub" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Code block before sub</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Определения методов должны размещаться перед операторами тела модуля</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CodeOutOfRegion" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Code out of region</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код расположен вне области</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CognitiveComplexity" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cognitive complexity</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Когнитивная сложность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CommandModuleExportMethods" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command module export methods</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспортные методы в модулях команд и общих команд</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CommentedCode" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Commented code</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закомментированный фрагмент кода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CommitTransactionOutsideTryCatch" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Commit transaction outside try catch</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нарушение правил работы с транзакциями для метода 'ЗафиксироватьТранзакцию'</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CommonModuleAssign" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Common module assign</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Присвоение общему модулю</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CommonModuleInvalidType" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Common module invalid type</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>	Общий модуль недопустимого типа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CommonModuleMissingAPI" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Common module missing API</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общий модуль должен иметь программный интерфейс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CommonModuleNameCached" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Common module name cached</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропущен постфикс "ПовтИсп"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CompilationDirectiveLost" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Compilation directive lost</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Директивы компиляции методов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CompilationDirectiveNeedLess" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Compilation directive need less</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лишняя директива компиляции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CreateQueryInCycle" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create query in cycle</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнение запроса в цикле</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CyclomaticComplexity" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cyclomatic complexity</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цикломатическая сложность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DataExchangeLoading" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Data exchange loading</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отсутствует проверка признака ОбменДанными.Загрузка в обработчике событий объекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DeprecatedAttributes8312" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deprecated attributes of platform 8.3.12</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устаревшие объекты платформы 8.3.12</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DeprecatedCurrentDate" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deprecated current date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование устаревшего метода "ТекущаяДата"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DeprecatedFind" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deprecated find</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование устаревшего метода "Найти"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DeprecatedMessage" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deprecated message</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ограничение на использование устаревшего метода "Сообщить"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DeprecatedMethods8310" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deprecated methods of platform 8.3.10</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование устаревшего метода клиентского приложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DeprecatedMethods8317" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deprecated methods of platform 8.3.17</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование устаревших глобальных методов платформы 8.3.17</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DeprecatedTypeManagedForm" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deprecated type ManagedForm</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устаревшее использование типа "УправляемаяФорма"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="EmptyCodeBlock" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Empty code block</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пустой блок кода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ExecuteExternalCode" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Execute external code at server</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнение произвольного кода на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ExecuteExternalCodeInCommonModule" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Execute external code in common module at server</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнение произвольного кода в общем модуле на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="FormDataToValue" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Form data to value</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование метода ДанныеФормыВЗначение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="GetFormMethod" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get form method</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование метода ПолучитьФорму</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IfElseIfEndsWithElse" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>If else if ends with else</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование синтаксической конструкции Если...Тогда...ИначеЕсли...</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IsInRoleMethod" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>IsInRole method</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование метода РольДоступна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="MissingSpace" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Missing space</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропущены пробелы слева или справа от операторов + - * / = % &lt; &gt; &lt;&gt; &lt;= &gt;=, от ключевых слов, а так же справа от , и ;</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="MultilingualStringHasAllDeclaredLanguages" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Multilingual string has all declared languages</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть локализованный текст для всех заявленных в конфигурации языков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="MultilingualStringUsingWithTemplate" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Multilingual string using with template</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Частично локализованный текст используется в функции СтрШаблон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="NestedStatements" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Nested statements</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управляющие конструкции не должны быть вложены слишком глубоко</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="OSUsersMethod" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>OSUsers method</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование метода ПользователиОС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SetPermissionsForNewObjects" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set permissions for new objects</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Флажок «Устанавливать права для новых объектов» должен быть установлен только у роли ПолныеПрава</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SpaceAtStartComment" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Space at start comment</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пробел в начале комментария</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="TempFilesDir" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Temp files dir</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызов функции КаталогВременныхФайлов()</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Typo" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Typo</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Опечатки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UnaryPlusInConcatenation" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Unary plus in concatenation of strings</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Унарный плюс в конкатенации строк</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UnionAll" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Using UnionAll in queries</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование ключевого слова "ОБЪЕДИНИТЬ" в запросах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UnsafeSafeModeMethodCall" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Unsafe SafeMode method call</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Небезопасное использование функции БезопасныйРежим()</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UsingExternalCodeTools" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Using external code tools</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование возможностей выполнения внешнего кода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UsingFindElementByString" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Using find element by string</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование методов "НайтиПоНаименованию" и "НайтиПоКоду"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UsingGoto" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Using goto</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оператор "Перейти" не должен использоваться</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UsingHardcodeNetworkAddress" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Using hardcode network address</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранение ip-адресов в коде</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UsingHardcodeSecretInformation" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Using hardcode secret information</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранение конфиденциальной информации в коде</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UsingLikeInQuery" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Using like in query</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование 'ПОДОБНО' в запросе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UsingObjectNotAvailableUnix" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Using object not available unix</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование объектов недоступных в Unix системах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UsingSynchronousCalls" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Using synchronous calls</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование синхронных вызовов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UsingThisForm" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Using ThisForm</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование устаревшего свойства "ЭтаФорма"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="YoLetterUsage" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>"ё" letter usage</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование буквы "ё" в текстах модулей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Check" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Check</Action>
+		</Command>
+		<Command name="SaveCheckDiaglosticsToFile" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save check diaglostics to file</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить параметры диагностики в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save check diaglostics to file</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SaveCheckDiaglosticsToFile</Action>
+		</Command>
+		<Command name="LoadCheckDiaglosticsFromFile" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load check diaglostics from file</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить параметры диагностики из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load check diaglostics from file</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>LoadCheckDiaglosticsFromFile</Action>
+		</Command>
+	</Commands>
+</Form>
